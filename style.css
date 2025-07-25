@@ -1,139 +1,322 @@
 /* General Style */
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  color: #333;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  line-height: 1.6;
 }
 
 a {
-  text-decoration: none;
-  color: #d63384;
-  font-weight: bold;
+  text-decoration: none;
+  color: #e91e63; /* A vibrant pink */
+  font-weight: bold;
 }
 
-.nav {
-  background-color: #ffe4e1;
-  padding: 10px 20px;
-  text-align: center;
+/* Menu Bar */
+.menu-bar {
+    background-color: #fce4ec; /* Light pink background */
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
+
+.menu-bar a {
+    color: #880e4f; /* Darker pink for text */
+    margin: 0 15px;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-bar a:hover {
+    background-color: #f8bbd0; /* Lighter pink on hover */
+    color: #4a148c; /* Purple tint on hover */
+}
+
 
 /* Landing Page */
 .landing-page {
-  background-color: #ffffff;
-  border: 12px solid #ffc0cb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  background-color: #fff; /* White background */
+  border: 12px solid #f8bbd0; /* Light pink border */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden; /* To handle potential animation overflows */
 }
 
 .container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 40px;
-  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 60px; /* Increased gap */
+  padding: 40px; /* Increased padding */
 }
 
 .left-side {
-  flex: 1;
-  text-align: center;
+  flex: 1;
+  text-align: center;
 }
 
 .profile-img {
-  width: 300px;
-  border-radius: 20px;
-  border: 5px solid #ffb6c1;
+  width: 350px; /* Slightly larger image */
+  border-radius: 20px;
+  border: 5px solid #e91e63; /* Vibrant pink border */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* More prominent shadow */
 }
 
 .right-side {
-  flex: 2;
-  text-align: left;
+  flex: 2;
+  text-align: left;
 }
 
-.right-side h1 {
-  font-size: 3em;
-  color: #d63384;
+.main-heading {
+  font-size: 4.5em; /* Larger font size */
+  color: #880e4f; /* Darker pink */
+  margin-bottom: 0;
+  line-height: 0.9;
 }
 
-.right-side h2 {
-  font-size: 1.5em;
-  color: #888;
-}
-
-.stats {
-  display: flex;
-  gap: 10px;
-  margin: 20px 0;
-}
-
-.stat-box {
-  background: linear-gradient(145deg, #f7f7f7, #ffffff);
-  border: 1px solid #ccc;
-  padding: 10px 20px;
-  border-radius: 12px;
-  font-weight: 500;
-  color: #555;
+.sub-heading {
+  font-size: 2em; /* Larger sub-heading */
+  color: #c2185b; /* Medium pink */
+  margin-top: 10px;
 }
 
 .btn {
-  display: inline-block;
-  background-color: #d63384;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  margin-top: 10px;
+  display: inline-block;
+  background-color: #e91e63; /* Vibrant pink button */
+  color: white;
+  padding: 15px 30px; /* Larger button */
+  border-radius: 30px; /* More rounded */
+  margin-top: 30px;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #d81b60; /* Slightly darker pink on hover */
+  transform: translateY(-3px); /* Subtle lift effect */
+}
+
+/* Shared Content Section Styles */
+.content-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.section-title {
+    font-size: 2.5em;
+    color: #880e4f; /* Darker pink for titles */
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f8bbd0; /* Light pink underline */
+    padding-bottom: 10px;
 }
 
 /* About Page */
-.fade-background {
-  background: linear-gradient(to bottom right, #ffe6f0, #ffffff);
-  padding: 40px;
+.about-page {
+  background: linear-gradient(to bottom right, #fce4ec, #fff); /* Light pink gradient */
+  padding: 40px 0; /* Adjusted padding */
+}
+
+.about-page p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
 }
 
 /* Skills Page */
 .skills-page {
-  background-color: #fff0f5;
-  padding: 40px;
-}
-
-.page-title {
-  font-size: 2em;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #d63384;
+  background-color: #fce4ec; /* Light pink background */
+  padding: 40px 0;
 }
 
 .skills-container {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  display: grid; /* Using grid for better layout */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+  gap: 30px;
 }
 
 .skill-box {
-  background: #fff;
-  border: 2px solid #ffc0cb;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px #ffd1dc80;
+  background: #fff;
+  border: 2px solid #f8bbd0; /* Light pink border */
+  padding: 25px; /* Increased padding */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.skill-box:hover {
+    transform: translateY(-5px);
 }
 
 .skill-box h3 {
-  color: #d63384;
+  color: #e91e63; /* Vibrant pink */
+  margin-top: 0;
+  font-size: 1.4em;
 }
 
-/* Highlights Page */
-.highlights-page {
-  background-color: #fff;
-  padding: 40px;
+.skill-box ul {
+    list-style: none; /* Remove default bullet */
+    padding: 0;
 }
 
-.highlight-list {
-  list-style: square;
-  padding-left: 30px;
+.skill-box li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
 }
 
-.highlight-list li {
-  margin-bottom: 15px;
-  font-size: 1.1em;
+.skill-box li::before {
+    content: '•'; /* Custom bullet point */
+    color: #e91e63; /* Pink bullet */
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+/* Projects Page */
+.projects-page {
+    background-color: #fff; /* White background */
+    padding: 40px 0;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-item {
+    background-color: #fce4ec; /* Light pink background */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+}
+
+.project-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #f8bbd0;
+}
+
+.project-item h3 {
+    color: #e91e63;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    color: #555;
+    font-size: 0.95em;
+}
+
+/* Contact Page */
+.contact-page {
+    background: linear-gradient(to top left, #fce4ec, #fff); /* Another light pink gradient */
+    padding: 40px 0;
+    min-height: 80vh; /* Ensure it takes up enough space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.contact-info .section-title {
+    color: #880e4f;
+    border-bottom: none; /* Remove underline for contact title */
+    margin-bottom: 20px;
+}
+
+.contact-details p {
+    font-size: 1.2em;
+    color: #555;
+    margin: 10px 0;
+}
+
+.contact-details strong {
+    color: #c2185b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .right-side {
+        text-align: center;
+    }
+
+    .main-heading {
+        font-size: 3.5em;
+    }
+
+    .sub-heading {
+        font-size: 1.5em;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr; /* Stack skills on small screens */
+    }
+
+    .content-section {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-img {
+        width: 250px;
+    }
+
+    .main-heading {
+        font-size: 2.8em;
+    }
+
+    .sub-heading {
+        font-size: 1.2em;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    .menu-bar a {
+        margin: 0 8px;
+        font-size: 0.9em;
+    }
 }
