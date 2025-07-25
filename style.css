@@ -1,50 +1,139 @@
+/* General Style */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fff0f5;
   margin: 0;
-  padding: 0;
-  line-height: 1.6;
+  font-family: 'Segoe UI', sans-serif;
   color: #333;
 }
 
-header {
-  background: #ffb6c1;
-  padding: 40px;
-  text-align: center;
-  color: white;
-}
-
-section {
-  padding: 20px 40px;
-}
-
-h2 {
-  color: #d63384;
-  border-bottom: 1px solid #ffc0cb;
-  padding-bottom: 5px;
-}
-
-ul {
-  list-style: square;
-  padding-left: 20px;
-}
-
-.project {
-  background-color: white;
-  padding: 10px;
-  border: 1px solid #ffd6e0;
-  margin: 10px 0;
-  border-radius: 8px;
-}
-
 a {
-  color: #d63384;
   text-decoration: none;
+  color: #d63384;
+  font-weight: bold;
 }
 
-footer {
+.nav {
+  background-color: #ffe4e1;
+  padding: 10px 20px;
   text-align: center;
-  background: #ffe4e1;
-  padding: 15px;
-  margin-top: 30px;
+}
+
+/* Landing Page */
+.landing-page {
+  background-color: #ffffff;
+  border: 12px solid #ffc0cb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+.left-side {
+  flex: 1;
+  text-align: center;
+}
+
+.profile-img {
+  width: 300px;
+  border-radius: 20px;
+  border: 5px solid #ffb6c1;
+}
+
+.right-side {
+  flex: 2;
+  text-align: left;
+}
+
+.right-side h1 {
+  font-size: 3em;
+  color: #d63384;
+}
+
+.right-side h2 {
+  font-size: 1.5em;
+  color: #888;
+}
+
+.stats {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.stat-box {
+  background: linear-gradient(145deg, #f7f7f7, #ffffff);
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 500;
+  color: #555;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #d63384;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* About Page */
+.fade-background {
+  background: linear-gradient(to bottom right, #ffe6f0, #ffffff);
+  padding: 40px;
+}
+
+/* Skills Page */
+.skills-page {
+  background-color: #fff0f5;
+  padding: 40px;
+}
+
+.page-title {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #d63384;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.skill-box {
+  background: #fff;
+  border: 2px solid #ffc0cb;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px #ffd1dc80;
+}
+
+.skill-box h3 {
+  color: #d63384;
+}
+
+/* Highlights Page */
+.highlights-page {
+  background-color: #fff;
+  padding: 40px;
+}
+
+.highlight-list {
+  list-style: square;
+  padding-left: 30px;
+}
+
+.highlight-list li {
+  margin-bottom: 15px;
+  font-size: 1.1em;
 }
