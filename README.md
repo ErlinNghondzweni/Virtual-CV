@@ -1,5 +1,4 @@
 # Virtual-CV
-# Virtual CV – Erlin Nghondzweni
 
 This is my personal portfolio website, designed to showcase who I am, what I’ve studied, and the skills and projects I’ve worked on as a final-year IT student.
 
