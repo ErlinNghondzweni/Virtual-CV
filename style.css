@@ -252,6 +252,20 @@ a {
     font-size: 0.95em;
 }
 
+/* Group Projects Section */
+.group-projects-page-section .project-item a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #e91e63; /* pastel/light pink tone */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.group-projects-page-section .project-item a:hover {
+  text-decoration: underline;
+  color: #c2185b; /* a slightly darker pink for hover effect */
+}
+
 /* Contact Section */
 .contact-page-section {
     background: linear-gradient(to top left, #ffe6f0, #ffffff);
