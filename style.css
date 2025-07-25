@@ -1,4 +1,4 @@
-/* General Style */
+/* GENERAL STYLE */
 html {
     scroll-behavior: smooth;
 }
@@ -16,7 +16,79 @@ a {
     font-weight: bold;
 }
 
-/* Specific Styles for portfolio.html */
+
+/* ========== LANDING PAGE (index.html) ========== */
+.landing-body {
+    background: linear-gradient(to bottom right, #ffe4e1, #fff);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.landing-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1000px;
+    padding: 40px;
+    background-color: #ffffff;
+    border: 3px solid #ffc0cb;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.profile-image-container {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.profile-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #d63384;
+}
+
+.profile-info {
+    flex: 2 1 400px;
+    padding: 20px;
+}
+
+.name-title {
+    font-size: 2.8em;
+    color: #d63384;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.enter-button {
+    background-color: #d63384;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.enter-button:hover {
+    background-color: #b42c6c;
+}
+
+
+/* ========== PORTFOLIO PAGE (portfolio.html) ========== */
 .portfolio-body {
     overflow-y: auto;
     scroll-snap-type: y mandatory;
@@ -75,9 +147,17 @@ a {
     font-size: 2.5em;
     color: #d63384;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     border-bottom: 2px solid #ffc0cb;
     padding-bottom: 10px;
+}
+
+/* Subtitle under headings */
+.section-subtitle {
+    font-size: 1.1em;
+    color: #777;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 /* About Section */
@@ -157,7 +237,6 @@ a {
     background-color: #fff0f5;
     border-radius: 15px;
     padding: 20px;
-    /* Removed borders/frames */
     box-shadow: none;
     text-align: left;
 }
@@ -212,6 +291,20 @@ a {
         font-size: 0.95em;
         padding: 5px 10px;
     }
+
+    .landing-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-info {
+        padding-top: 10px;
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -220,6 +313,14 @@ a {
     }
 
     .section-title {
-        font-size: 2em;
-    }
+        font-size: 2em;
+    }
+
+    .name-title {
+        font-size: 2.2em;
+    }
+
+    .tagline {
+        font-size: 1em;
+    }
 }
