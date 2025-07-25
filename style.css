@@ -50,9 +50,9 @@ a {
 .profile-image {
     width: 250px;
     height: 250px;
-    object-fit: cover;
     border-radius: 50%;
-    border: 5px solid #d63384;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .profile-info {
