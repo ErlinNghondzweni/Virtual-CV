@@ -18,7 +18,7 @@ a {
 
 /* Specific Styles for portfolio.html */
 .portfolio-body {
-    overflow-y: scroll;
+    overflow-y: auto;
     scroll-snap-type: y mandatory;
 }
 
@@ -67,7 +67,7 @@ a {
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    overflow-y: auto;
+    overflow: visible;
 }
 
 /* Section Titles */
@@ -125,23 +125,21 @@ a {
 .skill-box ul {
     list-style: none;
     padding-left: 20px;
-    position: relative;
 }
 
 .skill-box li {
+    margin-bottom: 12px;
     position: relative;
     padding-left: 20px;
-    margin-bottom: 10px;
 }
 
 .skill-box li::before {
-    content: '•';
+    content: "•";
     color: #d63384;
     position: absolute;
     left: 0;
     top: 0;
-    font-size: 1.2em;
-    line-height: 1;
+    font-size: 1.3em;
 }
 
 /* Coursework (Projects) Section */
@@ -159,7 +157,8 @@ a {
     background-color: #fff0f5;
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    /* Removed borders/frames */
+    box-shadow: none;
     text-align: left;
 }
 
@@ -192,7 +191,8 @@ a {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .skills-container, .project-grid {
+    .skills-container,
+    .project-grid {
         grid-template-columns: 1fr;
     }
 
@@ -200,7 +200,7 @@ a {
         padding: 20px;
         margin: 20px auto;
         height: auto;
-        min-height: 100vh;
+        min-height: auto;
     }
 
     .page {
@@ -220,6 +220,6 @@ a {
     }
 
     .section-title {
-        font-size: 2em;
-    }
+        font-size: 2em;
+    }
 }
