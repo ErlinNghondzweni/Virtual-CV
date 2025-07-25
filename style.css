@@ -24,7 +24,7 @@ a {
     align-items: center;
     justify-content: center;
     min-height: 100vh; /* Ensures it takes full screen height */
-    overflow: hidden; /* No scrolling on landing page */
+    /* REMOVED: overflow: hidden; */ /* This was preventing scrolling on small screens */
 }
 
 .landing-content {
