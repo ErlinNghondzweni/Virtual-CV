@@ -374,6 +374,35 @@ a {
   text-decoration: underline;
 }
 
+/* Initial state: sections are transparent and shifted down */
+.page {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Class to activate when in view */
+.page.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.achievement-list li::before {
+  content: "★";
+  color: #d63384;
+  font-size: 1.1em;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  animation: twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
     .skills-container,
