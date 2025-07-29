@@ -94,6 +94,24 @@ a {
     scroll-snap-type: y mandatory;
 }
 
+/* Resume Download Button */
+.download-resume-button {
+  display: inline-block;
+  background-color: #d63384;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.download-resume-button:hover {
+  background-color: #b42c6c;
+}
+
+
 /* Menu Bar */
 .menu-bar {
     background-color: #ffe4e1;
