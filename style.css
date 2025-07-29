@@ -300,6 +300,35 @@ a {
   text-decoration: underline;
 }
 
+/* Achievements Section */
+.achievements-page-section {
+    background-color: #fff;
+}
+
+.achievement-list {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1em;
+    color: #555;
+    line-height: 1.8;
+}
+
+.achievement-list li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.achievement-list li::before {
+    content: "★";
+    color: #d63384;
+    font-size: 1.1em;
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+
 /* Contact Section */
 .contact-page-section {
     background: linear-gradient(to top left, #ffe6f0, #ffffff);
